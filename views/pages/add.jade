@@ -1,0 +1,19 @@
+extends ../layout
+block content
+    div.hero-unit
+        h2= title
+        p.lead Let's add a new page to our site&hellip;
+    fieldset
+        legend So, what is this page?
+            form.form-horizontal(method="post")
+                div.control-group
+                    label(for="title").control-label page title 
+                    div.controls
+                        input(maxlength="100", required, title="your page must have a title!", name="title", type="text").input-xxlarge
+                div.control-group
+                    label(for="content").control-label page text
+                    div.controls
+                        textarea(name="content", rows="10", required, title="your page must have some content!").input-xxlarge
+                div.form-actions
+                    button(type="submit").btn.btn-success Save
+                    a(href="/").btn.btn-link.pull-right cancel

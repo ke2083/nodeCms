@@ -1,0 +1,27 @@
+doctype 5
+html
+  head
+    title Node CMS
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body.container-fluid
+    header
+        h1 CMS
+        div.navbar
+            nav.navbar-inner
+                a.brand(href="/") Home
+                ul.nav
+                    li 
+                        a(href="/pages/add") Add a new page
+                    li 
+                        a(href="#") Browse
+                form.navbar-form.pull-right
+                    div.input-append
+                        input(type="text")
+                        button(type="submit").btn search
+    article
+        block content
+    footer
+        p.centre &copy; Karl Lynch 
+            span= new Date().getFullYear()
